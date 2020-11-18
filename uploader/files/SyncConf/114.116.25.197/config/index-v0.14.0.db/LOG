@@ -1,0 +1,43 @@
+=============== Jul 1, 2019 (UTC) ===============
+07:55:31.858891 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+07:55:31.863863 db@open opening
+07:55:31.869949 version@stat F·[] S·0B[] Sc·[]
+07:55:31.872582 db@janitor F·2 G·0
+07:55:31.872606 db@open done T·8.730787ms
+=============== Jul 2, 2019 (UTC) ===============
+08:18:24.189733 db@close closing
+08:18:24.189811 db@close done T·77.357µs
+=============== Jul 2, 2019 (UTC) ===============
+08:18:53.557850 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+08:18:53.557993 version@stat F·[] S·0B[] Sc·[]
+08:18:53.558002 db@open opening
+08:18:53.558042 journal@recovery F·1
+08:18:53.558302 journal@recovery recovering @1
+08:18:53.568856 memdb@flush created L0@2 N·2935 S·42KiB "\x03JF..een,v2933":"\npr..ion,v3"
+08:18:53.569375 version@stat F·[1] S·42KiB[42KiB] Sc·[0.25]
+08:18:53.578011 db@janitor F·3 G·0
+08:18:53.578034 db@open done T·20.021985ms
+=============== Jul 2, 2019 (UTC) ===============
+08:58:03.027702 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+08:58:03.027866 version@stat F·[1] S·42KiB[42KiB] Sc·[0.25]
+08:58:03.027876 db@open opening
+08:58:03.027920 journal@recovery F·1
+08:58:03.028365 journal@recovery recovering @3
+08:58:03.032417 memdb@flush created L0@5 N·104 S·1KiB "\x00\x00\x00...ge,v2977":"\f\x00\x00...ge,v2978"
+08:58:03.033373 version@stat F·[2] S·44KiB[44KiB] Sc·[0.50]
+08:58:03.037845 db@janitor F·4 G·0
+08:58:03.037867 db@open done T·9.984848ms
+11:12:49.063380 db@close closing
+11:12:49.063464 db@close done T·83.415µs
+=============== Jul 3, 2019 (UTC) ===============
+06:33:28.114647 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+06:33:28.114814 version@stat F·[2] S·44KiB[44KiB] Sc·[0.50]
+06:33:28.114825 db@open opening
+06:33:28.114871 journal@recovery F·1
+06:33:28.115325 journal@recovery recovering @6
+06:33:28.120721 memdb@flush created L0@8 N·510 S·9KiB "\x00\x00\x00..swp,v3254":"\f\x00\x00..try,v3086"
+06:33:28.121635 version@stat F·[3] S·53KiB[53KiB] Sc·[0.75]
+06:33:28.126305 db@janitor F·5 G·0
+06:33:28.126324 db@open done T·11.492297ms
+06:39:02.276903 db@close closing
+06:39:02.276956 db@close done T·52.092µs

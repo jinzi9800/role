@@ -1,0 +1,10 @@
+--- 
+# tasks file for Basic_Tools_Setup
+- name: Install EPEL-repo & RUN Yum update
+  yum:
+    name: '{{ repo_update }}'
+    state: latest
+- name: Install Basic tools 
+  yum:
+    name: '{{ yum_tools }}'
+    state: latest

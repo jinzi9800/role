@@ -1,0 +1,12 @@
+---
+# vars file for PodmanSyncthing
+ContainerName: 'podmansyncthing'
+WhereSyCfg: '/var/www/ConfFiles/syncthing/config'
+WhatSySync: '/var/www/html'
+GID: '1000'
+UID: '1000'
+UmaskSet: '022'
+SyPort: '4747'
+SyExposePort: '22000'
+UDP: 21027
+SyImageName: 'linuxserver/syncthing'

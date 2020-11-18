@@ -1,0 +1,16 @@
+---
+# tasks file for DockerNetworkInit
+- name: Create a custom swarm network
+  docker_network:
+    name: "{{ network_name }}"
+    driver_options:
+      com.docker.network.bridge.enable_icc: "false"
+      com.docker.network.bridge.enable_ip_masquerade: "true"
+      com.docker.network.bridge.name: "{{ network_name }}" 
+    ipam_options:
+      subnet: "{{ docker_swarm_network }}"
+      gateway: "{{ docker_swarm_network | ipaddr('net') | ipaddr('1') | ipaddr('ip') }}"
+  tags:
+    - skip_ansible_lint # Suppressing the linter
+  when: docker_swarm_network is defined and docker_swarm_network | ipaddr('net')
+

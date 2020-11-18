@@ -1,0 +1,7 @@
+---
+# tasks file for up2Huawei1
+- name: upload configFile of syncthing
+  copy:
+    src: '{{SyncConfSrc}}'
+    dest: '{{SyncConfDest}}'
+    backup: yes

@@ -1,0 +1,20 @@
+---
+# tasks file for uploader
+- name: upload conf_files ops_files dev_files
+  copy:
+    src: '{{CODSource}}'
+    dest: '{{CODDestinction}}'
+    backup: yes
+
+- name: upload configFile of syncthing
+  copy:
+    src: "{{SyncConfSrc}}/{{ groups['all'][0] }}/"
+    dest: '{{SyncConfDest}}'
+    backup: yes
+  delegate_to: "{{ groups['all'][0] }}"
+- name: upload configFile of syncthing
+  copy:
+    src: "{{SyncConfSrc}}/{{ groups['all'][1] }}/"
+    dest: '{{SyncConfDest}}'
+    backup: yes
+  delegate_to: "{{ groups['all'][1] }}"

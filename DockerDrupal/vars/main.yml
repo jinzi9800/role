@@ -1,0 +1,10 @@
+---
+# vars file for DockerDrupal
+path_on_host_sites: '/var/www/html/sites'
+container_name_4_drupal: 'dockerdrupal'
+db_container_name: 'dockermariadb'
+database_name: 'SH'
+path_on_host_modules: '/var/www/html/modules'
+path_on_host_profiles: '/var/www/html/profiles'
+path_on_host_themes: '/var/www/html/themes'
+image_name: 'drupal:fpm'

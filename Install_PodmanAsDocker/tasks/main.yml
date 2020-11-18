@@ -1,0 +1,17 @@
+---
+# tasks file for Install_docker
+- name: install podman
+  yum:
+    name: podman
+    state: latest
+- name: alias docker
+  shell: echo "alias docker=podman" >> ~/.bashrc && source ~/.bashrc
+- name: make a dir for accelerate the podman_images by aliyun
+  copy:
+    src: /etc/containers/registries.conf
+    dest: /etc/containers/registries.conf
+    backup: yes
+  with_inventory_hostnames:
+    - domestic
+  notify:
+    - start podman

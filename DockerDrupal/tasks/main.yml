@@ -1,0 +1,14 @@
+---
+# tasks file for DockerDrupal
+- name: create a bind-volume to be link later by the way of copying the sites file out of drupal container 
+  shell: docker run --rm drupal:fpm tar -cC /var/www/html/sites . | tar -xC '{{path_on_host_sites}}' 
+- name: create docker container of drupal and link all necessary bind-mount for it 
+  command: 'docker run \ 
+          --name {{container_name_4_drupal}} \ 
+          --link {{db_container_name}}:{{database_name}} \ 
+          -d \ 
+          -v {{path_on_host_modules}}:/var/www/html/modules \ 
+          -v {{path_on_host_profiles}}:/var/www/html/profiles \ 
+          -v {{path_on_host_sites}}:/var/www/html/sites \ 
+          -v {{path_on_host_themes}}:/var/www/html/themes \ 
+          {{image_name}}' 

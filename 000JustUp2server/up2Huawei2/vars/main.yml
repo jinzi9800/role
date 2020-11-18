@@ -1,0 +1,4 @@
+---
+# vars file for up2Huawei2
+SyncConfSrc: ../files/SyncConf4Huawei2/syncthing/
+SyncConfDest: /var/www/ConfFiles/syncthing/

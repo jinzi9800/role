@@ -1,0 +1,14 @@
+---
+# tasks file for SyncFileOwner
+- name: Change the owner and group of SyncConfFile as Syncthing
+  file:
+    path: /var/www/ConfFiles/syncthing 
+    recurse: yes
+    owner: syncthing
+    group: syncthing
+- name: Change the SyncFileOwner as Syncthing
+  file:
+    path: /var/www/html
+    recurse: yes
+    owner: syncthing
+    group: syncthing

@@ -1,0 +1,9 @@
+---
+# vars file for DockerMariaDB
+contain_name: 'dockermariadb' 
+db_on_host: '/var/www/html/db'
+MYSQL_ROOT_PASSWORD: "Ailjy618" 
+MYSQL_DATABASE: "SH" 
+MYSQL_USER: "SH" 
+MYSQL_PASSWORD: "Ailjw999" 
+image_name: "mariadb"

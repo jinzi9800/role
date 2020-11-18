@@ -1,0 +1,12 @@
+---
+# vars file for Basic_Tools_Setup
+repo_update:
+  - epel-release
+  - '*'
+yum_tools:
+  - drush
+  - composer 
+  - git
+  - python-pip
+
+

@@ -1,0 +1,4 @@
+---
+# tasks file for RemoveDockerContainer
+- name: remove docker Containers of the server
+  shell: docker rm $(docker ps -aq)

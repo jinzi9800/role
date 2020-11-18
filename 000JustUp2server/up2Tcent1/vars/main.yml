@@ -1,0 +1,4 @@
+---
+# vars file for up2Tcent1
+SyncConfSrc: ../files/SyncConf4Tcent1/syncthing/
+SyncConfDest: /var/www/ConfFiles/syncthing/

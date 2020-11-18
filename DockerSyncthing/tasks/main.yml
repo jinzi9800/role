@@ -1,0 +1,16 @@
+---
+# tasks file for DockerSyncthing
+- name: run syncthing container
+  command: 'docker run \
+           --name {{ContainerName}} \
+           -v {{WhereSyCfg}}:/config \
+           -v {{WhatSySync}}:/config/Sync \
+           -e PGID={{GID}} \
+           -e PUID={{UID}} \
+           -e UMASK_SET={{UmaskSet}} \
+           -p {{SyPort}}:8384 \
+           -p {{SyExposePort}}:22000 \
+           -p {{UDP}}:21027/udp \ 
+           -d
+           --restart unless-stopped \
+           {{SyImageName}}'

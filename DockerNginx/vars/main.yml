@@ -1,0 +1,10 @@
+---
+# vars file for DockerNginx
+ContainerName: 'dockernginx'  
+BossContainerName: 'dockerdrupal'
+HostConfig: '/var/www/ConfFiles/nginx/conf.d/'  
+ErrLog: '/var/www/OpsFiles/nginx/check/weberr'
+AccLog: '/var/www/OpsFiles/nginx/check/webacc' 
+KeySSL: '/var/www/ConfFiles/SSL/214277946290667.key'
+PemSSL: '/var/www/ConfFiles/SSL/214277946290667.pem'   
+ImageName: 'nginx'  

@@ -1,0 +1,8 @@
+---
+# tasks file for DockerWP
+- name: install DockerWP on the server of leader
+  command: 'docker run \
+            --name {{container_name_4_WP}} \
+            --network {{network_name}} \
+            -p {{}}
+            -d wordpress

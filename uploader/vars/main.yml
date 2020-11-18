@@ -1,0 +1,6 @@
+---
+CODSource: ../files/COD/
+CODDestinction: /var/www/
+
+SyncConfSrc: ../files/SyncConf
+SyncConfDest: /var/www/ConfFiles/syncthing/

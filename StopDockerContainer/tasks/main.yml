@@ -1,0 +1,4 @@
+---
+# tasks file for StopDockerContainer
+- name: stop all the containers of the server
+  shell: docker stop $(docker ps -a -q)

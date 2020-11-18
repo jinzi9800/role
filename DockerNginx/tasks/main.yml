@@ -1,0 +1,16 @@
+---
+# tasks file for DockerNginx
+- name: DockerNginx for the dockerdrupal server with ssl service
+  command: 'docker run \ 
+           -p 443:443 \
+           -p 80:80 \
+           --name {{ContainerName}} \
+           --volumes-from {{BossContainerName}} \
+           -v {{HostConfig}}:/etc/nginx/conf.d/:ro \
+           -v {{ErrLog}}:/var/log/nginx/error.log \
+           -v {{AccLog}}:/var/log/nginx/access.log \  
+           -v {{KeySSL}}:/SSL/214277946290667.key:ro \
+           -v {{PemSSL}}:/SSL/214277946290667.pem:ro \
+           --link {{BossContainerName}}
+           -d \ 
+           {{ImageName}}'

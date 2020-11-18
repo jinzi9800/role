@@ -1,0 +1,13 @@
+---
+# tasks file for InitSyncID
+- name: Add the user 'syncthing' with a specific uid and primary group
+  group:
+    name: syncthing
+    gid: 1000
+    state: present
+- name: Add the user 'syncthing' with a specific uid and primary group
+  user:
+    name: syncthing
+    comment: user for docker container of syncthing
+    uid: 1000
+    group: syncthing

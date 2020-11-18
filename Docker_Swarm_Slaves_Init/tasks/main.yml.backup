@@ -1,0 +1,8 @@
+---
+# tasks file for DockerSwarmSlavesInit
+- name: Get the token from the leader server
+  command: docker swarm join-token worker | sed -n '3,4p'
+  register: docker swarm join-token as a worker
+
+- name: Get the IP address of leader server
+  command: ansible_fact

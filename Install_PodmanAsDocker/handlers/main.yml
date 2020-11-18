@@ -1,0 +1,10 @@
+---
+# handlers file for Install_docker
+- name: start podman
+  service:
+    name: podman
+    state: started
+- name: startup with podman
+  service:
+    name: podman
+    enabled: yes

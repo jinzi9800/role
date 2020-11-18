@@ -1,0 +1,12 @@
+---
+# tasks file for DockerMariaDB
+- name: run DockerMariaDB
+  command: 'docker run \
+           --name {{contain_name}} \
+           -v {{db_on_host}}:/var/lib/mysql \
+           -e MYSQL_ROOT_PASSWORD={{MYSQL_ROOT_PASSWORD}} \
+           -e MYSQL_DATABASE={{MYSQL_DATABASE}} \
+           -e MYSQL_USER={{MYSQL_USER}} \
+           -e MYSQL_PASSWORD={{MYSQL_ROOT_PASSWORD}} \
+           -d \
+           {{image_name}}'

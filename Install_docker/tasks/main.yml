@@ -1,0 +1,24 @@
+---
+# tasks file for Install_docker
+- name: update docker_project_repo
+  copy: 
+    src: ../files/docker_project.repos.d
+    dest: /etc/yum.repos.d/docker_project.repo
+    backup: yes
+- name: install docker-engine
+  yum:
+    name: docker-engine
+    state: latest
+- name: make a dir for accelerate the docker_images by aliyun
+  file:
+    path: /etc/docker
+    state: directory
+- name: accelerate the docker_images by aliyun
+  copy: 
+    src: /etc/docker/daemon.json
+    dest: /etc/docker/daemon.json 
+  with_inventory_hostnames:
+    - domestic
+  notify:
+    - start docker
+    - startup with docker
