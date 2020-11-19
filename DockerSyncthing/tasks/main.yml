@@ -11,5 +11,4 @@
            -p {{SyPort}}:8384 \
            -p {{SyExposePort}}:22000 \
            -p {{UDP}}:21027/udp \ 
-           --restart unless-stopped \
            {{SyImageName}}'
